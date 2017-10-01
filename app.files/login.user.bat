@@ -1,8 +1,8 @@
 ECHO off
 
 SET mysqldir=<path to mariadb.min>
-SET username=<pokerj
-SET password=pokerj07
-SET dbname=db1
+SET username=<user name>
+SET password=<password>
+SET dbname=<database name>
 
 %mysqldir%\bin\mysql --user=%username% --password=%password% --database=%dbname%
