@@ -27,6 +27,10 @@ desc <table name>;
 ```
 show create table <table name>;
 ```
+## Show fields in a table
+```
+show columns from <table name>;
+```
 ## insert multiple records into table in one statement
 ```
 insert into <table name> (field name list) values (field value list), (field value list)...;
