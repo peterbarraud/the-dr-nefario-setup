@@ -12,6 +12,7 @@ use <database name>;
 show tables;
 ```
 ## Create table
+```
 create table (
     id tinyint unsigned NOT NULL AUTO_INCREMENT,
     someforeignkeyid int NOT NUll,
@@ -19,6 +20,7 @@ create table (
     PRIMARY KEY (id),
     FOREIGN KEY (someforeignkeyid) REFERENCES `<reference table` (`reference field`)
 );
+```
 ## Table description
 ```
 desc <table name>;
@@ -35,4 +37,5 @@ show columns from <table name>;
 ```
 insert into <table name> (field name list) values (field value list), (field value list)...;
 ```
-
+## Execute .sql file from the bash
+`<relative path to mysql.exe>/mysql -u <user name> -p<password> <database name> < sqlfilename.sql`
