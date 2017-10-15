@@ -38,4 +38,4 @@ show columns from <table name>;
 insert into <table name> (field name list) values (field value list), (field value list)...;
 ```
 ## Execute .sql file from the bash
-`<relative path to mysql.exe>/mysql -u <user name> -p<password> <database name> < sqlfilename.sql`
+`<relative path to mysql bin folder>/mysql -u <user name> -p<password> <database name> < sqlfilename.sql`
