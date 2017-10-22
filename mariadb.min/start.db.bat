@@ -5,8 +5,7 @@ IF EXIST mdb.running (
 	pause
 ) ELSE (
 	ECHO MariaDB running > mdb.running
-	bin\mysqld
+	bin\mysqld || (
+		pause
+	)
 )
-
-..\common.bat\manageerror.bat handleerror
-
