@@ -1,2 +1,4 @@
 mariadb.min/data/*
 mariadb.min/mdb.running
+php.min/ext/
+php.min/*.*
