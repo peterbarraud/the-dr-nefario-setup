@@ -1,5 +1,5 @@
 # How to split your JS
-1. Let's use the sample module `users.js`
+1. Let's use the sample module `src/js/sample.code.splitting/users.js`
 1. Go to the webpack config, and include `users` entry:
 ```
   entry: {
