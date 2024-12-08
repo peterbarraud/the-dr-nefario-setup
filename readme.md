@@ -22,6 +22,6 @@ What we have is a very basic setup. Usually, you'll use these resources to make 
 | Internal | External |
 | -- | -- |
 | [Setup bootstrap](http://aaa.adobe.com) | [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) |
-| How to use PHP services | -- |
+| https://github.com/peterbarraud/the-dr-nefario-setup/tree/main/backoffice | -- |
 | Code-splitting | [Webpack](https://webpack.js.org/guides/code-splitting/) |
-| Use some nice Vanilla JS - Sass | [SASS Lang](https://sass-lang.com/) |
+| Use some nice Vanilla Sass | [SASS Lang](https://sass-lang.com/) |

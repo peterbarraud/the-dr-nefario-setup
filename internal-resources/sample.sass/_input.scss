@@ -1,0 +1,16 @@
+@use 'colors' as *;
+
+.text-input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;  //behaves like div
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: rgb(203, 215, 246);
+    &:hover{
+      background-color: rgb(172, 193, 247);
+    }
+
+  }

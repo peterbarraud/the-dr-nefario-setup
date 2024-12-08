@@ -1,0 +1,36 @@
+@use 'colors' as *;
+
+
+.modal-dialog{
+    border-radius: 10px;
+    min-width: 40%;
+    min-height: 30%;
+    border: none;
+    // &::backdrop{
+    //     background-color: rgb(197, 210, 212);
+    // }
+}
+
+.modal-common{
+    display:block;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font: 20px Arial, sans-serif;
+
+}
+
+modal-header{
+    @extend .modal-common;
+}
+
+modal-body{
+    @extend .modal-common;
+    min-height: 60%;
+    font: 14px Arial, sans-serif;
+}
+
+modal-footer{
+    display: flex;
+    justify-content: flex-end;
+}
