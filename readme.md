@@ -23,5 +23,5 @@ What we have is a very basic setup. Usually, you'll use these resources to make 
 | -- | -- |
 | [Setup bootstrap](http://aaa.adobe.com) | [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) |
 | https://github.com/peterbarraud/the-dr-nefario-setup/tree/main/backoffice | -- |
-| https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/code.splitting.md | [Webpack](https://webpack.js.org/guides/code-splitting/) |
-| https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/sass.md | [SASS Lang](https://sass-lang.com/) |
+| [Code-splitting](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/code.splitting.md) | [Webpack](https://webpack.js.org/guides/code-splitting/) |
+| [Use some nice Vanilla Sass](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/sass.md) | [SASS Lang](https://sass-lang.com/) |
