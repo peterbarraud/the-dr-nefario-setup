@@ -1,6 +1,6 @@
 # Using SASS
-1. Best way to start is to pick up the `scss` files from internal-resources/sample.scss
-1. Then look at the internal-resources/sample.scss/index.html for examples
+1. Best way to start is to pick up the `scss` files from sample.scss
+1. Then look at the sample.scss/index.html for examples
 
 **IMPORTANT**: Probably best not to use this with Bootstrap.
 

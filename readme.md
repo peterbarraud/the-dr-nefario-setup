@@ -22,10 +22,10 @@ You can then use the references to go in whichever direction you want - Vanilla 
 What we have is a very basic setup. Usually, you'll use these resources to make a move on.
 | Internal | External |
 | -- | -- |
-| [Setup bootstrap](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/bootstrap.md) | [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) |
+| [Setup bootstrap](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/readme.md#to-setup-bootstrap) | [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) |
 | [Using the Backoffice services](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/backoffice/readme.md) | -- |
-| [Code-splitting](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/code.splitting.md) | [Webpack](https://webpack.js.org/guides/code-splitting/) |
-| [Use some nice Vanilla Sass](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/sass.md) | [SASS Lang](https://sass-lang.com/) |
+| [Code-splitting](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/src/js/readme.md) | [Webpack](https://webpack.js.org/guides/code-splitting/) |
+| [Use some nice Vanilla Sass](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/src/scss/readme.md) | [SASS Lang](https://sass-lang.com/) |
 
 # To setup Bootstrap
 
