@@ -14,6 +14,7 @@ You can then use the references to go in whichever direction you want - Vanilla 
 1. Open `backoffice/services/db.sql` and change db stuff as/if required - maybe db name
 1. Paste the contents into the mysql prompt
 1. Start php: `php.start.bat`
+1. Go to your browser and try out: `http://localhost:8089/services/rest.api.php/getuserlist`. It should show an empty list - [] (NO ERRORS)
 1. Install the npm dependencies using `npm i`
 1. Start your website with `npm start`
 
@@ -21,7 +22,7 @@ You can then use the references to go in whichever direction you want - Vanilla 
 What we have is a very basic setup. Usually, you'll use these resources to make a move on.
 | Internal | External |
 | -- | -- |
-| [Setup bootstrap](http://aaa.adobe.com) | [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) |
-| https://github.com/peterbarraud/the-dr-nefario-setup/tree/main/backoffice | -- |
+| [Setup bootstrap](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/bootstrap.md) | [Bootstrap 5](https://getbootstrap.com/docs/5.3/getting-started/introduction/) |
+| [Using the Backoffice services](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/backoffice/readme.md) | -- |
 | [Code-splitting](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/code.splitting.md) | [Webpack](https://webpack.js.org/guides/code-splitting/) |
 | [Use some nice Vanilla Sass](https://github.com/peterbarraud/the-dr-nefario-setup/blob/main/internal-resources/sass.md) | [SASS Lang](https://sass-lang.com/) |

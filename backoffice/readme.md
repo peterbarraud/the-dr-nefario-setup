@@ -1,64 +1,34 @@
-# Get started with the Backoffice
+## Backoffice
+### Object layer
+We have this PHP-based object layer to keep things as simple as possible. It's not very complicated, but seems to work pretty well.
 
-## Create mariadb Database
-1. To start mariadb, double-click `start.db.bat`
-1. To login as root user, double-click `login.root.bat`
-1. Create a database `create database <database-name>`
-1. Create a db user with all permissions on this database
-```
-create user '<user name>'@'localhost' identified by '<password>';
-grant all privileges on <database-name>.* to 'newuser'@'localhost';
-```
-1. Put this into the `services/datainfo.json`
+(**Note** We still haven't accounted for many-to-many relations)
+#### Creating an object
+So, let's say you have an entity like user (let's call this `app user`). What you do is:
 
-## Log in as User
-1. Open the command line in the main folder
-*Note*: Double-clicking the login.user.bat doesn't work
-1. Execute the following command:
-```
-login.user -u <username> -p<password> -D <databse name>
-```
+1. Create an appuser table which must have the primary key as an integer type field. (And, of course, other fields, besides)
+1. You then create the following php objects:
+    1. `appuser` (see the example in this repo)
+    2. `appusercollection`
 
-## Build the data-object model
-For each object that you need, create a table and the corresponding .php object and object collection
-1. Create database table
-The primary field of the table MUST be named id and MUST be auto increment
-```
-create table <table name> (
-    id int not null auto_increment,
-    <other fields>
-    primary key (id)
-);
-```
-2. Create PHP object
-In the services/objectlayer folder, create the php object
-Name of the php object MUST be identical to the table and must inherit from `objectbase`
-See `appuser.php` for example
-1. Create PHP object collection
-In the objectlayer folder, create the php objectcollection
-Name of the php objectcollection MUST be identical to the table suffixed with `collection` and must inherit from `objectcollectionbase`
-See `appusercollection.php` for example
+**Note**: We have one interesting field - a `timestamp` field. If you have a timestamp field, we recommend that you us the `_ts` suffix for the field time. We will then update that field for any update to a table entry. If you make a new entry, you should not set the timestamp field - we will make the timestamp entry. If you update the entry, we will update the timestamp entry.
 
-## Build the RestFUL API
-In the services folder, you should have `rest.api.php`
+Notes for objects:
+1. The **object** class constructor takes a single (optional) parameter.
+    1. ID will return the complete object (as per the corresponding database entity). Update any property and hit save (`{object}->Save();`) and you have an updated database entry
+    2. Pass nothing and you get an empty object. What do I do with an empty object, you may ask? Well, PHP kindly allows you to assign properties to an object (just like that). Assign the fields some values (maybe for a new entry), hit save (`{object}->Save();`) and voila, you have a new database entry
+2. The **object collection** class returns a collection of  object.
+    1. The collection class takes lots of parameters (all optional). If you don't give any params, you'll get back a collection of all the database entries for that object.
+    1. Parameters:
+        
+        * **$filter**: Pass one Namevalue object, or an array of NameValue objects (for multiple filters)
+        
+        * **sortby**: field to sort by. Currently, we only support a single field
+        
+        * **$sortdirection**: Sort direction - `asc` or `desc`
 
-For each rest function that you need, you create one `PHP` function
+        * **$limit**: A number of entries to get
+    1. Methods:
+        * **getobjectcollection()**: gets the object collection
+        * **length()**: gets the length of the collection
 
-The arguments to function are the parameters on the rest call
-
-Eg: If you have a rest call `validateuser` as such:
-```
-http://localhost:8080/services/rest.api.php/validateuser/pokerj/floop
-```
-
-You catch this with a function in rest.api.php:
-```
-function validateuser($username, $password)
-```
-## Start the RestFUL server
-1. In the main folder, double-click `start.php.bat`
-1. To test the php server is running, go to: [http://localhost:8089/services/phpinfo.php](http://localhost:8089/services/phpinfo.php)
-1. To test the rest.api is working, go to: [http://localhost:8089/services/rest.api.php/testrest/[some param value]](http://localhost:8089/services/rest.api.php/testrest/justtest)
-The browser should display the json of what you entered as the parameter to testrest
-
-## 
