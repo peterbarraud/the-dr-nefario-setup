@@ -9,6 +9,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/js/main.js',
+    todo: './src/js/todoitem.js'
   },
   stats: {warnings:false},
   output: {
